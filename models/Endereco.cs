@@ -5,6 +5,6 @@ public class Endereco {
   public string uf {get; set;}
   public string cep {get; set;}
   public int numero {get; set;}
-  public DateTime dataCricao {get; set;}
+  public DateTime dataCriacao {get; set;}
   public Abrigo Abrigo {get; set;}
 }

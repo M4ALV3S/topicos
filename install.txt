@@ -1,0 +1,25 @@
+Dotnet 
+
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+Ef 
+
+dotnet tool install --global dotnet-ef
+
+Migrations
+
+Primeira migração
+
+dotnet ef migrations add InitialCreate
+
+Att
+
+dotnet ef database update
+
+Alterar
+
+dotnet ef migrations add NomeDaMigracaoParaAlteracao
+
+

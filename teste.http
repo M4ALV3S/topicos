@@ -1,0 +1,104 @@
+### Cadastrar endereço
+POST http://localhost:5190/enderecos/cadastrar
+Content-Type: application/json
+
+{
+  "logradouro": "Rua",
+  "numero": 220,
+  "cidade": "Campinas",
+  "uf": "PR",
+  "cep": "13045-000"
+}
+
+###
+
+### Cadastrar abrigo (use um EnderecoID existente, ex: 1)
+POST http://localhost:5190/abrigo/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Abrigo Lar Feliz",
+  "qtdPets": 0,
+  "EnderecoID": 6
+}
+
+###
+
+### Listar abrigos
+GET http://localhost:5190/abrigos/listar
+
+###
+
+### Buscar abrigo por cidade
+GET http://localhost:5190/abrigo/buscar-por-cidade/Campinas
+
+###
+
+### Cadastrar pet (use um AbrigoID existente, ex: 1)
+POST http://localhost:5190/pets/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Luna",
+  "idade": 3,
+  "porte": "Pequeno",
+  "descricao": "Muito dócil e sociável",
+  "AbrigoID": 1
+}
+
+###
+
+### Listar pets
+GET http://localhost:5190/pets/listar
+
+###
+
+### Buscar pet por ID
+GET http://localhost:5190/pets/3
+
+###
+
+### Buscar pets por nome do abrigo
+GET http://localhost:5190/pets/abrigo/Abrigo Lar Feliz
+
+###
+
+### Atualizar pet
+PUT http://localhost:5190/pets/alterar/1
+Content-Type: application/json
+
+{
+  "nome": "Luna",
+  "idade": 4,
+  "porte": "Pequeno",
+  "descricao": "Atualização: castrada e vacinada",
+  "AbrigoID": 1
+}
+
+###
+
+### Deletar pet
+DELETE https://localhost:5190/pets/1
+
+###
+
+### Cadastrar adoção (use petID e AbrigoID existentes)
+POST http://localhost:5190/adocoes/cadastrar
+Content-Type: application/json
+
+{
+  "petID": 1,
+  "AbrigoID": 1,
+  "realizadaEm": "2025-05-28T10:00:00",
+  "cpfTutor": "12345678900"
+}
+
+###
+
+### Listar adoções
+GET http://localhost:5190/adocoes/listar
+
+###
+
+### Deletar abrigo (somente se não houver dependência de pets ou adoções)
+DELETE http://localhost:5190/abrigos/1

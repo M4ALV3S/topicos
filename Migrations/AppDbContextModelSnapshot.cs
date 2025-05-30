@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace projetoTopicos.Migrations
+namespace API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot
@@ -14,7 +14,7 @@ namespace projetoTopicos.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "9.0.4");
+            modelBuilder.HasAnnotation("ProductVersion", "9.0.5");
 
             modelBuilder.Entity("Abrigo", b =>
                 {
@@ -83,7 +83,7 @@ namespace projetoTopicos.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("dataCricao")
+                    b.Property<DateTime>("dataCriacao")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("logradouro")
